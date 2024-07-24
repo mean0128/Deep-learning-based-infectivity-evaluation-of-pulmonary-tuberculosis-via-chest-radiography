@@ -19,6 +19,8 @@ def work_func(alloc0, alloc1):
         img = cv2.imread(targetPath + f, cv2.IMREAD_GRAYSCALE)
         img = cv2.resize(img, (512,512))
         cv2.imwrite(outPath + f, img)
+        print(cnt)
+        cnt += 1
 if __name__ == '__main__':
     threads = []
     for job in jobAlloc:
@@ -28,4 +30,4 @@ if __name__ == '__main__':
         
     for thread in threads:
         thread.join()
-del threads        
+del threads
