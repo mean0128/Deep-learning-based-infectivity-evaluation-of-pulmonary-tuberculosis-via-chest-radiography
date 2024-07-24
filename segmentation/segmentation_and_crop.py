@@ -1,7 +1,21 @@
-import tensorflow as tf
-from natsort import natsorted
 import cv2, os
 import numpy as np
+import tensorflow as tf
+from natsort import natsorted
+from tensorflow_addons.optimizers import AdamW
+from keras_unet_collection.activations import GELU
+from segmentation_models.losses import bce_dice_loss
+from keras_unet_collection.transformer_layers import patch_extract
+from keras_unet_collection.transformer_layers import patch_embedding
+
+model = tf.keras.models.load_model("segmentation model file path.h5", # model file path should be modified 
+                                   custom_objects={'binary_crossentropy_plus_dice_loss' : bce_dice_loss,
+                                                   'patch_embedding' : patch_embedding,
+                                                   'patch_extract' : patch_extract,
+                                                   'Addons>AdamW' : AdamW,
+                                                   'GELU' : GELU,
+                                                   })
+
 inPath = "input folder path"
 outPath = "output folder path"
 threshold = 0.5 # segmentation probability threshold
@@ -20,7 +34,6 @@ def is_image_inverted(image, threshold=63):
 
     mean_intensity = np.mean(edges)
     return mean_intensity > threshold
-model = tf.keras.models.load_model("segmentation model file path.h5") # should be modified 
 
 #%%
 files = natsorted(os.listdir(inPath))
@@ -38,7 +51,7 @@ def work_func(alloc0, alloc1):
         image = cv2.imread(inPath+f)[:,:,:3]
         if is_image_inverted(image):
             image = 255-image
-        image2 = cv2.resize(image, (512,512))
+        image2 = cv2.resize(image, (512,512))/255.
         image2 = np.expand_dims(image2, 0)
         res = model.predict(image2, verbose = 0)
         res = np.squeeze(res, 0)
