@@ -47,7 +47,7 @@ jobAlloc = [[i*allocJobs, (i+1)*allocJobs] for i in range(threads -1)]
 jobAlloc.append([ jobAlloc[len(jobAlloc)-1][1], totalN ])
 def work_func(alloc0, alloc1):
     for f in files[alloc0:alloc1]:
-        image = cv2.imread(inPath+f)[:,:,:3]
+        image = cv2.imread(inPath, cv2.IMREAD_GRAYSCALE)
         if is_image_inverted(image):
             image = 255-image
         image2 = cv2.resize(image, (512,512))/255.
@@ -57,6 +57,7 @@ def work_func(alloc0, alloc1):
         mask = (res > threshold).astype(np.uint8)
         mask = cv2.resize(mask, (image.shape[1], image.shape[0]))
         contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        contours = sorted(contours, key=cv2.contourArea, reverse=True)[:2] # largest 2 contours (left, right lung)
         min_x = min_y = float('inf')
         max_x = max_y = 0
         for contour in contours:
