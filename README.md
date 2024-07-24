@@ -19,7 +19,7 @@ segmentation-models==1.0.1
 
 keras-unet-collection==0.1.13
 
-lime==-0.2.0.1
+lime==0.2.0.1
 
 
 you can download models from the link below.
