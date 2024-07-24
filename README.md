@@ -19,10 +19,15 @@ TransUNet: Employed for precise lung region segmentation, focusing on the most r
 Requirements
 ============
 tensorflow-gpu==2.10.0
+
 tensorflow-addons==0.22.0
+
 vit-keras==0.1.2
+
 segmentation-models==1.0.1
+
 keras-unet-collection==0.1.13
+
 lime==-0.2.0.1
 
 Due to the large size of the saved model, you can download it from the link below.
