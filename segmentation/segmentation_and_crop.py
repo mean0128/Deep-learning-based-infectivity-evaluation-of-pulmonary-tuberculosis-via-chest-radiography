@@ -1,10 +1,6 @@
 import tensorflow as tf
 from natsort import natsorted
 import cv2, os
-from glob import glob
-import matplotlib.pyplot as plt
-import threading, mritopng, cv2
-import pydicom as pdc
 import numpy as np
 inPath = "input folder path"
 outPath = "output folder path"
