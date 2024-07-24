@@ -6,8 +6,6 @@ Here, we provide the AI and segmentation models developed for
 
 evaluating the infectivity of pulmonary tuberculosis (PTB) using chest radiography. 
 
-These models leverage cutting-edge deep learning technologies to enhance diagnostic accuracy and efficiency.
-
 
 About the Models
 ================
