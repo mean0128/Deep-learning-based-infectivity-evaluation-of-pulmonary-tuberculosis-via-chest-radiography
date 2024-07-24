@@ -1,7 +1,7 @@
 import cv2, os
 import threading
-targetPath = "D:/wyj/TransUnet/val/CXR/"
-outPath = "D:/wyj/TransUnet/val/CXR2/"
+targetPath = "path to folder where the mask is"
+outPath = "path to the folder where the mask will be saved "
 files = os.listdir(targetPath)
 totalN = len(os.listdir(targetPath))
 threads = totalN 
@@ -18,6 +18,8 @@ def work_func(alloc0, alloc1):
     for f in os.listdir(targetPath)[alloc0:alloc1]:
         img = cv2.imread(targetPath + f, cv2.IMREAD_GRAYSCALE)
         img = cv2.resize(img, (512,512))
+        img[img < 64] = 0
+        img[img>=64] = 1
         cv2.imwrite(outPath + f, img)
 if __name__ == '__main__':
     threads = []
