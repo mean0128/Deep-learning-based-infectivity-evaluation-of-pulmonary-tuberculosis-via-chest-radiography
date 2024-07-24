@@ -17,16 +17,28 @@ TransUNet: Employed for precise lung region segmentation, focusing on the most r
 
 Due to the large size of the saved model, you can download it from the link below.
 
-TransUnet(lung segmentation) : https://drive.google.com/file/d/1K9qe_iMobf9V_gcXuvpTbtrBmmVqaDuM/view?usp=drive_link
+TransUnet(lung segmentation)
 
-DenseNet121(proposed model) : https://drive.google.com/file/d/1lkCHB6qxVXKUsWTtVJe7h4JSXBe9GOJa/view?usp=drive_link
+https://drive.google.com/file/d/1K9qe_iMobf9V_gcXuvpTbtrBmmVqaDuM/view?usp=drive_link
 
-DenseNet201 : https://drive.google.com/file/d/1xujp2yy3k5kGXh49z8DScbqeFi7FhM1l/view?usp=drive_link
+DenseNet121(proposed model)
 
-ResNet152V2 : https://drive.google.com/file/d/1CdUmaqAWEWqqUMfAhRN8_TLRKazgUX8T/view?usp=drive_link
+https://drive.google.com/file/d/1lkCHB6qxVXKUsWTtVJe7h4JSXBe9GOJa/view?usp=drive_link
 
-EfficientNetV2L : https://drive.google.com/file/d/15ijWCzri-7T5ymyb2VIOW0P1C_sfKH37/view?usp=drive_link
+DenseNet201
 
-Vision Trnasformer B16 : https://drive.google.com/file/d/1pogsnJ8-m1UNHtM1sasZjrQCAI77_MaM/view?usp=drive_link
+https://drive.google.com/file/d/1xujp2yy3k5kGXh49z8DScbqeFi7FhM1l/view?usp=drive_link
+
+ResNet152V2
+
+https://drive.google.com/file/d/1CdUmaqAWEWqqUMfAhRN8_TLRKazgUX8T/view?usp=drive_link
+
+EfficientNetV2L
+
+https://drive.google.com/file/d/15ijWCzri-7T5ymyb2VIOW0P1C_sfKH37/view?usp=drive_link
+
+Vision Transformer B16
+
+https://drive.google.com/file/d/1pogsnJ8-m1UNHtM1sasZjrQCAI77_MaM/view?usp=drive_link
 
 ![git](https://github.com/user-attachments/assets/191e8c92-84d7-4cbc-bde6-5c0df8a2ddca)
