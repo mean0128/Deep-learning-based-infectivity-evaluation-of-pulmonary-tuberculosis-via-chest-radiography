@@ -1,7 +1,7 @@
 import cv2, os
 import threading
-targetPath = "folder to the image to read"
-outPath = "folder to the resized image to save"
+targetPath = "path to folder where the CXR is"
+outPath = "path to the folder where the CXR will be saved"
 files = os.listdir(targetPath)
 totalN = len(os.listdir(targetPath))
 threads = totalN 
