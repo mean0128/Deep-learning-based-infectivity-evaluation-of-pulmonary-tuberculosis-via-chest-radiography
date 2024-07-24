@@ -18,9 +18,11 @@ def work_func(alloc0, alloc1):
     for f in os.listdir(targetPath)[alloc0:alloc1]:
         img = cv2.imread(targetPath + f, cv2.IMREAD_GRAYSCALE)
         img = cv2.resize(img, (512,512))
-        img[img < 64] = 0
+        img[img < 64] = 0 # original segmentation mask is composed of 0 and 255
         img[img>=64] = 1
         cv2.imwrite(outPath + f, img)
+        print(cnt)
+        cnt += 1
 if __name__ == '__main__':
     threads = []
     for job in jobAlloc:
