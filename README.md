@@ -7,13 +7,6 @@ Here, we provide the AI and segmentation models developed for
 evaluating the infectivity of pulmonary tuberculosis (PTB) using chest radiography. 
 
 
-About the Models
-================
-
-DenseNet121: Utilized for its robust feature extraction capabilities in analyzing chest X-rays.
-
-TransUNet: Employed for precise lung region segmentation, focusing on the most relevant areas for PTB infectivity assessment.
-
 Requirements
 ============
 tensorflow-gpu==2.10.0
@@ -28,8 +21,9 @@ keras-unet-collection==0.1.13
 
 lime==-0.2.0.1
 
-Due to the large size of the saved model, you can download it from the link below.
-----------------------------------------------------------------------------------
+
+you can download models from the link below.
+============================================
 TransUnet(lung segmentation)
 
 https://drive.google.com/file/d/1K9qe_iMobf9V_gcXuvpTbtrBmmVqaDuM/view?usp=drive_link
