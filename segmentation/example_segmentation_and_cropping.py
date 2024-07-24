@@ -8,6 +8,9 @@ from segmentation_models.losses import bce_dice_loss
 from keras_unet_collection.transformer_layers import patch_extract
 from keras_unet_collection.transformer_layers import patch_embedding
 
+inPath = "input folder path"
+outPath = "output folder path"
+threshold = 0.5 # segmentation probability threshold
 model = tf.keras.models.load_model("segmentation model file path.h5", # model file path should be modified 
                                    custom_objects={'binary_crossentropy_plus_dice_loss' : bce_dice_loss,
                                                    'patch_embedding' : patch_embedding,
@@ -15,10 +18,6 @@ model = tf.keras.models.load_model("segmentation model file path.h5", # model fi
                                                    'Addons>AdamW' : AdamW,
                                                    'GELU' : GELU,
                                                    })
-
-inPath = "input folder path"
-outPath = "output folder path"
-threshold = 0.5 # segmentation probability threshold
 
 def is_image_inverted(image, threshold=63):
     height, width = image.shape[:2]
