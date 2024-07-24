@@ -1,5 +1,5 @@
 AI and Segmentation Model for PTB Evaluation
-
+============================================
 Welcome to our repository! 
 
 Here, we provide the AI and segmentation models developed for 
@@ -10,13 +10,23 @@ These models leverage cutting-edge deep learning technologies to enhance diagnos
 
 
 About the Models
+================
 
 DenseNet121: Utilized for its robust feature extraction capabilities in analyzing chest X-rays.
 
 TransUNet: Employed for precise lung region segmentation, focusing on the most relevant areas for PTB infectivity assessment.
 
-Due to the large size of the saved model, you can download it from the link below.
+Requirements
+============
+tensorflow-gpu==2.10.0
+tensorflow-addons==0.22.0
+vit-keras==0.1.2
+segmentation-models==1.0.1
+keras-unet-collection==0.1.13
+lime==-0.2.0.1
 
+Due to the large size of the saved model, you can download it from the link below.
+----------------------------------------------------------------------------------
 TransUnet(lung segmentation)
 
 https://drive.google.com/file/d/1K9qe_iMobf9V_gcXuvpTbtrBmmVqaDuM/view?usp=drive_link
