@@ -26,7 +26,7 @@ you can download models from the link below.
 ============================================
 TransUnet(lung segmentation)
 
-https://drive.google.com/file/d/1K9qe_iMobf9V_gcXuvpTbtrBmmVqaDuM/view?usp=drive_link
+https://drive.google.com/file/d/18dNTi2s9XE-oFnl_zBL-1uOMTA1IFjcT/view?usp=drive_link
 
 DenseNet121(proposed model)
 
