@@ -39,10 +39,10 @@ def grad_cam_plus_plus(model, img, layer_name, label_index):
 random_state = 1
 random.seed(random_state)
 
-model = tf.keras.models.load_model("D:/wyj/DenseNet121_Final_Softmax.h5")
+model = tf.keras.models.load_model("your model file path")
 
 #%%
-img = cv2.imread("D:/wyj/3798.png")
+img = cv2.imread("your cxr image file path")
 img = cv2.resize(img, (224,224))/255.
 res_prob = model.predict(tf.expand_dims(img, 0))
 analysingImg = img
